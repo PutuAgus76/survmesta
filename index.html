@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panduan Pemula SURVMESTA</title>
+    <style>
+      /* --- Reset & Base Styles --- */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #1a1a1a; /* Warna gelap ala background Minecraft */
+        color: #e0e0e0;
+        line-height: 1.6;
+      }
+
+      /* --- Layout Container --- */
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      /* --- Header --- */
+      header {
+        text-align: center;
+        padding: 40px 20px;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url("https://www.transparenttextures.com/patterns/cubes.png");
+        background-color: #2e2e2e;
+        border-bottom: 4px solid #4caf50; /* Hijau Minecraft */
+        margin-bottom: 30px;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 0px #000;
+      }
+
+      header p {
+        font-size: 1.2rem;
+        color: #a5d6a7; /* Hijau muda */
+        font-weight: bold;
+      }
+
+      /* --- Server IP Box --- */
+      .server-ip-box {
+        background-color: #333;
+        border: 2px dashed #ffb74d; /* Oranye/Gold */
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .server-ip-box h3 {
+        color: #ffb74d;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+      }
+
+      .ip-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .ip-item {
+        background-color: #000;
+        padding: 15px;
+        border-radius: 5px;
+        min-width: 250px;
+      }
+
+      .ip-label {
+        display: block;
+        color: #aaa;
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+      }
+
+      .ip-address {
+        display: block;
+        color: #fff;
+        font-family: "Courier New", Courier, monospace;
+        font-weight: bold;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+      }
+
+      /* --- Content Sections --- */
+      .guide-section {
+        background-color: #252525;
+        padding: 25px;
+        margin-bottom: 25px;
+        border-radius: 8px;
+        border-left: 5px solid #4caf50;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      }
+
+      h2.section-title {
+        color: #4caf50;
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+        border-bottom: 1px solid #444;
+        padding-bottom: 10px;
+      }
+
+      h3.subsection-title {
+        color: #81c784;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        margin-bottom: 15px;
+      }
+
+      /* --- Lists & Commands --- */
+      ul,
+      ol {
+        margin-bottom: 15px;
+        margin-left: 20px;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
+
+      .command-box {
+        background-color: #111;
+        padding: 10px 15px;
+        border-radius: 4px;
+        font-family: "Courier New", Courier, monospace;
+        color: #fdd835; /* Kuning command */
+        margin-bottom: 15px;
+        border: 1px solid #444;
+        display: inline-block;
+        width: 100%;
+      }
+
+      .note {
+        font-weight: bold;
+        color: #ef5350; /* Merah muda untuk peringatan */
+      }
+
+      /* --- Special Mobile Section --- */
+      .mobile-guide {
+        background-color: #2c3e50; /* Warna beda dikit untuk Bedrock */
+        border: 1px solid #4a6fa5;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 20px;
+      }
+
+      .mobile-guide h3 {
+        color: #64b5f6; /* Biru langit */
+        border-bottom: 1px solid #4a6fa5;
+        padding-bottom: 10px;
+        margin-top: 0;
+      }
+
+      /* --- Footer --- */
+      footer {
+        text-align: center;
+        padding: 40px 20px;
+        margin-top: 40px;
+        border-top: 1px solid #333;
+        color: #777;
+        font-size: 0.9rem;
+      }
+
+      /* --- Responsive Design --- */
+      @media (max-width: 600px) {
+        header h1 {
+          font-size: 1.8rem;
+        }
+
+        .container {
+          padding: 10px;
+        }
+
+        .guide-section {
+          padding: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>PANDUAN PEMULA SERVER SURVMESTA</h1>
+        <p>Survival Server Minecraft</p>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="server-ip-box">
+        <h3>🔥 JOIN SEKARANG 🔥</h3>
+        <div class="ip-grid">
+          <div class="ip-item">
+            <span class="ip-label">JAVA EDITION</span>
+            <span class="ip-address">neo-2.arqonara.com:25542</span>
+          </div>
+          <div class="ip-item">
+            <span class="ip-label">BEDROCK EDITION</span>
+            <span class="ip-address">Address: neo-2.arqonara.com</span>
+            <span class="ip-address">Port: 25447</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="guide-section">
+        <h2 class="section-title">
+          🌍 PANDUAN PEMULA SERVER SURVMESTA (Versi 1.0) 🌍
+        </h2>
+        <p>
+          Selamat datang di SURVMESTA! Ini adalah server Survival murni di mana
+          pemain dapat berpetualang, membangun, dan bertahan hidup bersama
+          pemain lain. Server ini dimainkan secara santai namun tetap seru.
+        </p>
+      </div>
+
+      <section class="guide-section">
+        <h2 class="section-title">
+          1. CARA LOGIN <span class="note">(Penting!)</span>
+        </h2>
+        <p>
+          Saat pertama kali masuk server, pemain wajib mendaftarkan akun agar
+          aman.
+        </p>
+
+        <p><strong>Perintah:</strong></p>
+        <div class="command-box">
+          /register &lt;password&gt; &lt;ulangi_password&gt;
+        </div>
+
+        <p><strong>Contoh:</strong></p>
+        <div class="command-box">/register rahasia123 rahasia123</div>
+
+        <p>Jika sudah pernah daftar, gunakan:</p>
+        <div class="command-box">/login &lt;password&gt;</div>
+      </section>
+
+      <section class="guide-section">
+        <h2 class="section-title">2. MENUJU DUNIA SURVIVAL</h2>
+        <ul>
+          <li>Saat join, pemain akan berada di Lobby.</li>
+          <li>Cari <strong>NPC</strong> di depan pemain.</li>
+          <li>Klik NPC untuk teleport ke dunia Survival (SURVMESTA).</li>
+          <li>Untuk kembali ke Lobby gunakan perintah:</li>
+        </ul>
+        <div class="command-box">/lobby</div>
+      </section>
+
+      <section class="guide-section">
+        <h2 class="section-title">3. FITUR TIMBER (Tebang Pohon Instan)</h2>
+        <ul>
+          <li>Fitur ini membuat pohon hancur seketika saat ditebang.</li>
+          <li>
+            <span class="note"
+              >Disarankan dimatikan saat membangun rumah dari kayu.</span
+            >
+          </li>
+        </ul>
+
+        <p><strong>Perintah:</strong></p>
+        <ul>
+          <li>
+            Menyalakan:
+            <span class="command-box" style="display: inline; padding: 2px 5px"
+              >/on timber</span
+            >
+          </li>
+          <li>
+            Mematikan:
+            <span class="command-box" style="display: inline; padding: 2px 5px"
+              >/off timber</span
+            >
+          </li>
+        </ul>
+        <p>Status ON/OFF dapat dilihat di scoreboard sebelah kanan layar.</p>
+      </section>
+
+      <section class="guide-section">
+        <h2 class="section-title">4. SISTEM SCOREBOARD</h2>
+        <p>Scoreboard di sebelah kanan layar menampilkan:</p>
+        <ul>
+          <li>Nama</li>
+          <li>Uang ($)</li>
+          <li>Status Timber</li>
+          <li>Ping</li>
+        </ul>
+        <p>Perintah untuk menampilkan atau menyembunyikan:</p>
+        <div class="command-box">/sb</div>
+      </section>
+
+      <section class="guide-section">
+        <h2 class="section-title">5. TELEPORTASI (TPA)</h2>
+        <p>Gunakan perintah berikut untuk berkunjung ke teman:</p>
+        <ul>
+          <li><div class="command-box">/tpa &lt;nama_teman&gt;</div></li>
+          <li>
+            <div class="command-box">/tpaccept</div>
+            (Untuk menerima)
+          </li>
+          <li>
+            <div class="command-box">/tpdeny</div>
+            (Untuk menolak)
+          </li>
+        </ul>
+      </section>
+
+      <section class="guide-section">
+        <h2 class="section-title">6. PANDUAN SHOP (/shop)</h2>
+        <p>
+          Gunakan perintah
+          <span class="command-box" style="display: inline; padding: 2px 5px"
+            >/shop</span
+          >
+          untuk membeli dan menjual item.
+        </p>
+
+        <div class="mobile-guide">
+          <h3>📱 KHUSUS PENGGUNA HP (BEDROCK / MCPE)</h3>
+
+          <h4>A. Cara Membeli Barang:</h4>
+          <ul>
+            <li>Geser item ke inventory untuk membeli.</li>
+            <li>
+              Gunakan ikon <strong>Glass</strong> (1, 16, 32) untuk mengatur
+              jumlah.
+            </li>
+            <li>
+              Gunakan ikon <strong>Chest</strong> untuk membeli 1 stack (64
+              item).
+            </li>
+          </ul>
+          <br />
+          <h4>B. Cara Menjual Barang:</h4>
+          <ul>
+            <li>Masuk kategori barang.</li>
+            <li>
+              Geser ikon <strong>Torch (Obor)</strong> untuk masuk
+              <strong>Mode JUAL</strong>.
+            </li>
+            <li>
+              Geser item dari inventory ke menu shop untuk menjual otomatis.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div
+        style="
+          text-align: center;
+          margin-top: 40px;
+          padding: 20px;
+          border: 2px solid #555;
+          border-radius: 8px;
+        "
+      >
+        <p style="font-size: 1.1rem; font-weight: bold; color: #fff">
+          "Selamat bermain dan membangun di SURVMESTA! Jaga kerukunan dan
+          dilarang merusak bangunan pemain lain."
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <p>SURVMESTA Survival Server – Panduan Pemula</p>
+    </footer>
+  </body>
+</html>
